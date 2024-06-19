@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Test </title>
+        <style>
+            .con {
+                display: inline-block;
+            }
+
+            .button {
+                height: 50px;
+                width: 50px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: aqua;
+                border-radius: 50%;
+                text-decoration: none;
+            }
+
+            .text {
+                z-index: 1;
+            }
+
+            .button::before {
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                position: absolute;
+                content: "";
+                transform: scale(0);
+                border-radius: 50%;
+                transition: 0.5s ease-in-out;
+            }
+
+            .button:hover::before {
+                transform: scale(1);
+            }
+        </style>
+    </head>
+    <Body>
+        <div class="con">
+            <a class="button" href=""><p class="text">Hi</p></a>
+        </div>
+        
+    </Body>
+</html>
